@@ -1,0 +1,3 @@
+
+-- ghci commands
+-- :t 'a'
