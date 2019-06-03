@@ -4,7 +4,7 @@ module GreetIfCool1 where
 
     greetIfCool coolness =
         if cool
-            then putStrLn "eyyy. What's shakin'"
-        else
-            putStrLn "pshhh"
+            then putStrLn ("eyyyyy. What's shakin'?")
+        else 
+            putStrLn "pshhhh. go away."
         where cool = coolness == "downright frosty yo"

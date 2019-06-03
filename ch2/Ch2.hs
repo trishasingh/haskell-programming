@@ -1,2 +1,6 @@
 sayHello :: String -> IO()
-sayHello x = putStrLn("Hello, " ++ x ++ "!")
+sayHello x = putStrLn ("Hello, " ++ x ++ "!")
+
+-- function intro
+triple x = x * 3
+
