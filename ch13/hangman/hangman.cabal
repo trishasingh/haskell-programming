@@ -1,0 +1,22 @@
+name:                hangman
+version:             0.1.0.0
+synopsis:            Playing hangman
+description:         Setting up my first project
+homepage:            github.com/trishasingh
+license:             BSD3
+license-file:        LICENSE
+author:              Trisha Singh
+maintainer:          trishasingh2696@gmail.com
+category:            Game
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  data/dict.txt
+
+executable hangman
+  ghc-options:         -Wall
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , random == 1.1
+                     , split == 0.2.3.3
