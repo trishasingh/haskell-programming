@@ -42,9 +42,7 @@ instance Monoid a => Monoid (Identity a) where
   mempty = Identity mempty
 
 instance Arbitrary a => Arbitrary (Identity a) where
-  arbitrary = do
-    x <- arbitrary
-    return (Identity x)
+  arbitrary = Identity <$> arbitrary
 
 type IdentityAssoc a = Identity a -> Identity a -> Identity a -> Bool
 type IdentityId a = Identity a -> Bool
@@ -61,9 +59,9 @@ instance (Monoid a, Monoid b) => Monoid (Two a b) where
   mempty = Two mempty mempty
 
 instance (Arbitrary a, Arbitrary b) => Arbitrary (Two a b) where
-  arbitrary = do
+  arbitrary = do 
     a <- arbitrary
-    b <- arbitrary 
+    b <- arbitrary
     return (Two a b)
 
 type TwoAssoc a b = Two a b -> Two a b -> Two a b -> Bool
