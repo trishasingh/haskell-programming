@@ -44,3 +44,8 @@ y'' = lookup 2 $ zip xs ys
 
 summed :: Maybe Integer
 summed = sum <$> ((,) <$> x'' <*> y'')
+
+-- pg 806
+f1 = const <$> Just "Hello" <*> pure "World"
+f1' = liftA2 const (Just "Hello") (pure "World")
+f2 = (,,,) <$> Just 90 <*> Just 10 <*> Just "Tierness" <*> pure [1,2,3]
